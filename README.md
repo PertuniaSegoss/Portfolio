@@ -4,7 +4,7 @@ Welcome to my personal frontend development portfolio! This project showcases th
 
  🌐 Live Site
 
-[Click to view the portfolio](https://pertuniasegoss.github.io/OIBSIP/)  
+[Click to view the portfolio](https://pertuniasegoss.github.io/Portfolio/)  
 (*Update this link if you create a separate portfolio page!*)
 
 
