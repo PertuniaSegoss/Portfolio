@@ -8,15 +8,6 @@ Welcome to my personal frontend development portfolio! This project showcases th
 (*Update this link if you create a separate portfolio page!*)
 
 
-🧰 Projects Included
-
-Here are the featured projects in this portfolio:
-
-1. **[Weather App](https://pertuniasegoss.github.io/Weather-App/)** – Live weather data with a clean interface.
-2. **[Git Forex Landing Page](https://pertuniasegoss.github.io/Git-Forex/)** – A modern landing page for a forex brand.
-3. **[Property Forever](https://pertuniasegoss.github.io/Property-Forever/)** – A real estate site with dynamic listings and a carousel.
-4. **[Construction Website](https://pertuniasegoss.github.io/Construction-Page/)** – Informational page with responsive design.
-5. **[OIBSIP Showcase](https://pertuniasegoss.github.io/OIBSIP/)** – Highlighting projects completed during my internship.
 
 🎯 Purpose
 
