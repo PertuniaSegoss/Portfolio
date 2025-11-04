@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesego | Frontend Developer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
   <body>
     <header class="hero">
       <div class="container">
+        <!-- Profile Picture Placeholder -->
+        <div class="profile-pic">
+          <img src="Formal Picture.jpg" alt="Profile Picture" />
+        </div>
+
         <h1>Hello, I'm <span>Pertunia</span></h1>
         <p>
           A passionate Frontend Developer who turns ideas into interactive web
@@ -26,7 +36,14 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          Hi, I’m Lesego, a passionate Front-End Web Developer who builds modern, responsive, and interactive web applications. My work spans real-world business tools, dynamic dashboards, and engaging user experiences — from e-commerce stores and admin dashboards to crypto trackers, weather apps, and property listings. I specialize in clean, maintainable code, API integration, and designs that look great on any device. Explore my projects below to see how I turn ideas into functional, user-friendly websites and apps.
+          Hi, I’m Lesego, a passionate Front-End Web Developer who builds
+          modern, responsive, and interactive web applications. My work spans
+          real-world business tools, dynamic dashboards, and engaging user
+          experiences — from e-commerce stores and admin dashboards to crypto
+          trackers, weather apps, and property listings. I specialize in clean,
+          maintainable code, API integration, and designs that look great on any
+          device. Explore my projects below to see how I turn ideas into
+          functional, user-friendly websites and apps.
         </p>
       </div>
     </section>
@@ -35,9 +52,12 @@
       <div class="container">
         <h2>Projects</h2>
         <div class="project-grid">
+          <!-- Project cards (unchanged) -->
           <div class="project-card">
             <h3>Job Portal</h3>
-            <p>A Job Portal which provides all the Job listings in South Africa.</p>
+            <p>
+              A Job Portal which provides all the Job listings in South Africa.
+            </p>
             <a
               href="https://pertuniasegoss.github.io/job-portal/"
               target="_blank"
@@ -45,13 +65,12 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
             <h3>Currency Convertor</h3>
             <p>
               A simple and dynamic currency converter built with plain
               JavaScript that fetches live exchange rates from an API to convert
-              between multiple currencies
+              between multiple currencies.
             </p>
             <a
               href="https://pertuniasegoss.github.io/currency-converter/"
@@ -60,9 +79,8 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
-            <h3>Currency Convertor and Currency Rates Dashboard</h3>
+            <h3>Currency Dashboard</h3>
             <p>
               A live currency rates dashboard displaying up-to-date exchange
               rates for multiple currency pairs in one view.
@@ -74,14 +92,15 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
-            <h3>ChatBot With Quizz</h3>
+            <h3>ChatBot With Quiz</h3>
             <p>
-              Pertunia Tech Chatbot – A friendly, browser-based chatbot that answers tech questions, has a quizz and shares fun facts using HTML, CSS, and JavaScript.
+              Pertunia Tech Chatbot – A friendly, browser-based chatbot that
+              answers tech questions, has a quiz and shares fun facts using
+              HTML, CSS, and JavaScript.
             </p>
             <a
-              href="https://pertuniasegoss.github.io/chatbot/ "
+              href="https://pertuniasegoss.github.io/chatbot/"
               target="_blank"
               class="btn"
               >Live Demo</a
@@ -97,7 +116,6 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
             <h3>E-Commerce Site</h3>
             <p>An E-Commerce page designed for a hair business.</p>
@@ -108,7 +126,6 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
             <h3>Property Website</h3>
             <p>A modern property website layout showcasing listings.</p>
@@ -119,7 +136,6 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
             <h3>Landing Page</h3>
             <p>
@@ -133,12 +149,11 @@
               >Live Demo</a
             >
           </div>
-
           <div class="project-card">
             <h3>Movie Search Bar</h3>
             <p>
               A sleek movie search app using plain JavaScript that fetches movie
-              data from the IMDb API
+              data from the IMDb API.
             </p>
             <a
               href="https://pertuniasegoss.github.io/movie-search-bar/"
@@ -160,6 +175,35 @@
           <textarea placeholder="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
+
+        <!-- Contact Center with Icons in one row -->
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>
+                <a href="mailto:Lesegondhlovu05@gmail.com"
+                  >Lesegondhlovu05@gmail.com</a
+                >
+              </p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p><a href="tel:0750354872">075 035 4872</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/pertunia-ndhlovu-384372201/"
+                  target="_blank"
+                  >LinkedIn Profile</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -197,12 +241,6 @@
       </div>
     </footer>
 
-    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
