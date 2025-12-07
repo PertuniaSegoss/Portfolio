@@ -1,247 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesego | Frontend Developer</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome for Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header class="hero">
-      <div class="container">
-        <!-- Profile Picture Placeholder -->
-        <div class="profile-pic">
-          <img src="Formal Picture.jpg" alt="Profile Picture" />
+<head>
+  <meta charset="UTF-8" />
+  <title>Pertunia Lesego Ndhlovu | Frontend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Pertunia</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero section" id="home">
+  <div class="hero-bg-code"></div>
+
+  <div class="profile-pic">
+    <div class="ring"></div>
+    <img src="profile.jpg" alt="Profile Picture" />
+  </div>
+
+  <h1>Hi, I'm <span>Pertunia</span></h1>
+
+  <h2 id="typed-text" class="typed-text"></h2>
+
+  <p>I build clean, modern and responsive web applications.</p>
+
+  <a href="#projects" class="btn">View My Work</a>
+</section>
+
+
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Frontend & MERN Stack Developer with experience in
+      building responsive user interfaces, dynamic applications and full-stack
+      systems using modern technologies.
+    </p>
+  </section>
+
+  <section id="skills" class="container">
+  <h2>My Skills</h2>
+  <p class="skills-intro">Technologies I work with</p>
+
+  <div class="skills-row">
+
+    <div class="skill-card">
+      <i class="fa-brands fa-html5"></i>
+      <p>HTML5</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-css3-alt"></i>
+      <p>CSS3</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-js"></i>
+      <p>JavaScript</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-react"></i>
+      <p>React.js</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-node-js"></i>
+      <p>Node.js</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-database"></i>
+      <p>MongoDB</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-server"></i>
+      <p>Express.js</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-sass"></i>
+      <p>Sass / SCSS</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-github"></i>
+      <p>Git & GitHub</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-brands fa-npm"></i>
+      <p>NPM</p>
+    </div>
+
+    <div class="skill-card">
+      <i class="fa-solid fa-code"></i>
+      <p>REST APIs</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    
+<div class="project-grid" id="project-grid">
+
+  <div class="project-card ui">
+    <div class="project-overlay">
+      <h3>Landing Page</h3>
+      <p>HTML • CSS • JavaScript</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/landing-page/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Landing Page</h4>
+      <div class="stack-badges">
+        <span>HTML</span><span>CSS</span><span>JS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card ui">
+    <div class="project-overlay">
+      <h3>Job Portal</h3>
+      <p>HTML • CSS • JavaScript</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/job-portal/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Job Portal</h4>
+      <div class="stack-badges">
+        <span>HTML</span><span>CSS</span><span>JS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card tools">
+    <div class="project-overlay">
+      <h3>Currency Converter</h3>
+      <p>JavaScript • API</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/currency-converter/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Currency Converter</h4>
+      <div class="stack-badges">
+        <span>JS</span><span>API</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card tools">
+    <div class="project-overlay">
+      <h3>Currency Dashboard</h3>
+      <p>JavaScript • API</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/currency-Convertor-and-Currency-Rates-Dashboard/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Currency Dashboard</h4>
+      <div class="stack-badges">
+        <span>JS</span><span>API</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card ui">
+    <div class="project-overlay">
+      <h3>Movie Search</h3>
+      <p>JavaScript • API</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/movie-search-bar/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Movie Search</h4>
+      <div class="stack-badges">
+        <span>JS</span><span>API</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card ui">
+    <div class="project-overlay">
+      <h3>Weather App</h3>
+      <p>JavaScript • API</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/Weather-App/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Weather App</h4>
+      <div class="stack-badges">
+        <span>JS</span><span>API</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card react">
+    <div class="project-overlay">
+      <h3>Task Manager</h3>
+      <p>React • Node • Express • MongoDB</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/task-manager/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Task Manager</h4>
+      <div class="stack-badges">
+        <span>React</span><span>Node</span><span>Express</span><span>MongoDB</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card ui">
+    <div class="project-overlay">
+      <h3>Property Website</h3>
+      <p>HTML • CSS • JavaScript</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/Property-Forever/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>Property Website</h4>
+      <div class="stack-badges">
+        <span>HTML</span><span>CSS</span><span>JS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card tools">
+    <div class="project-overlay">
+      <h3>ChatBot + Quiz</h3>
+      <p>JavaScript</p>
+      <a class="btn" href="https://pertuniasegoss.github.io/chatbot/" target="_blank">Live</a>
+    </div>
+    <div class="project-content">
+      <h4>ChatBot + Quiz</h4>
+      <div class="stack-badges">
+        <span>JS</span>
+      </div>
+    </div>
+    </div>
+</div>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Me</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <div class="contact-details">
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:youremail@gmail.com">Lesegondhlovu05@gmail.com</a>
         </div>
 
-        <h1>Hello, I'm <span>Pertunia</span></h1>
-        <p>
-          A passionate Frontend Developer who turns ideas into interactive web
-          experiences.
-        </p>
-        <a href="#projects" class="btn">View My Work</a>
-      </div>
-    </header>
-
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          Hi, I’m Lesego, a passionate Front-End Web Developer who builds
-          modern, responsive, and interactive web applications. My work spans
-          real-world business tools, dynamic dashboards, and engaging user
-          experiences — from e-commerce stores and admin dashboards to crypto
-          trackers, weather apps, and property listings. I specialize in clean,
-          maintainable code, API integration, and designs that look great on any
-          device. Explore my projects below to see how I turn ideas into
-          functional, user-friendly websites and apps.
-        </p>
-      </div>
-    </section>
-
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="project-grid">
-          <!-- Project cards (unchanged) -->
-          <div class="project-card">
-            <h3>Job Portal</h3>
-            <p>
-              A Job Portal which provides all the Job listings in South Africa.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/job-portal/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Currency Convertor</h3>
-            <p>
-              A simple and dynamic currency converter built with plain
-              JavaScript that fetches live exchange rates from an API to convert
-              between multiple currencies.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/currency-converter/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Currency Dashboard</h3>
-            <p>
-              A live currency rates dashboard displaying up-to-date exchange
-              rates for multiple currency pairs in one view.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/currency-Convertor-and-Currency-Rates-Dashboard/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>ChatBot With Quiz</h3>
-            <p>
-              Pertunia Tech Chatbot – A friendly, browser-based chatbot that
-              answers tech questions, has a quiz and shares fun facts using
-              HTML, CSS, and JavaScript.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/chatbot/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Weather App</h3>
-            <p>Check real-time weather by city. Simple and responsive.</p>
-            <a
-              href="https://pertuniasegoss.github.io/Weather-App/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Task Manager</h3>
-            <p>A MERN-based task manager that lets users create, update, and delete tasks with full CRUD functionality. Includes a clean UI, API integration, and persistent data storage. </p>
-            <a
-              href="https://pertuniasegoss.github.io/task-manager/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Property Website</h3>
-            <p>A modern property website layout showcasing listings.</p>
-            <a
-              href="https://pertuniasegoss.github.io/Property-Forever/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Landing Page</h3>
-            <p>
-              Designed and developed a luxurious, responsive landing page for Segoss Luxe Scented Candles, featuring smooth animations, a soft pink-and-white color palette, and interactive product showcases.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/landing-page/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
-          <div class="project-card">
-            <h3>Movie Search Bar</h3>
-            <p>
-              A sleek movie search app using plain JavaScript that fetches movie
-              data from the IMDb API.
-            </p>
-            <a
-              href="https://pertuniasegoss.github.io/movie-search-bar/"
-              target="_blank"
-              class="btn"
-              >Live Demo</a
-            >
-          </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>067 968 6858</p>
         </div>
-      </div>
-    </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-
-        <!-- Contact Center with Icons in one row -->
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <p>
-                <a href="mailto:Lesegondhlovu05@gmail.com"
-                  >Lesegondhlovu05@gmail.com</a
-                >
-              </p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p><a href="tel:0750354872">075 035 4872</a></p>
-            </div>
-            <div class="contact-item">
-              <i class="fab fa-linkedin"></i>
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/pertunia-ndhlovu-384372201/"
-                  target="_blank"
-                  >LinkedIn Profile</a
-                >
-              </p>
-            </div>
-          </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <a href="#">github.com/PertuniaSegoss</a>
         </div>
-      </div>
-    </section>
 
-    <section id="certificates" class="certificates">
-      <div class="container">
-        <h2>Certificates</h2>
-        <div class="certificates-grid">
-          <img
-            src="Screenshot_20241002_165100_Chrome.jpg"
-            alt="Certificate 1"
-          />
-          <img
-            src="Screenshot_20241002_165110_Chrome.jpg"
-            alt="Certificate 2"
-          />
-          <img
-            src="Screenshot_20241002_165130_Chrome.jpg"
-            alt="Certificate 6"
-          />
-          <img
-            src="Screenshot_20241002_165148_Chrome.jpg"
-            alt="Certificate 7"
-          />
-          <img
-            src="Screenshot_20241002_165205_Chrome.jpg"
-            alt="Certificate 8"
-          />
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2025 Pertunia Lesego Ndhlovu. All rights reserved.</p>
-      </div>
-    </footer>
+  <footer>
+    <p>© 2025 Pertunia Lesego Ndhlovu | All Rights Reserved</p>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+
+</body>
 </html>
-
-
