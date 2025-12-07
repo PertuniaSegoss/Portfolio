@@ -1,3 +1,4 @@
+/* ================= GLOBAL RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,9 @@ body {
   background: #f5f7fa;
   color: #1a1a1a;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ================= CONTAINER ================= */
@@ -18,6 +22,7 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 2rem;
+  flex: 1;
 }
 
 /* ================= NAVBAR ================= */
@@ -63,8 +68,6 @@ body {
 }
 
 /* ================= HERO ================= */
-/* ================= HERO ================= */
-
 .hero {
   position: relative;
   color: white;
@@ -75,8 +78,6 @@ body {
   transform: translateY(28px);
   animation: heroEnter 1.4s ease forwards;
 }
-
-/* Smooth entrance */
 @keyframes heroEnter {
   0% {
     opacity: 0;
@@ -88,7 +89,7 @@ body {
   }
 }
 
-/* Background with glowing gradient + code overlay */
+/* Hero background code overlay */
 .hero-bg-code {
   position: absolute;
   inset: 0;
@@ -99,7 +100,6 @@ body {
   );
   z-index: -3;
 }
-
 .hero-bg-code::before {
   content: "<div>const code = 'flow...';</div>";
   position: absolute;
@@ -112,7 +112,6 @@ body {
   animation: slideCode 10s linear infinite;
   white-space: nowrap;
 }
-
 @keyframes slideCode {
   0% {
     top: -20%;
@@ -122,13 +121,12 @@ body {
   }
 }
 
-/* Profile picture + rotating gradient ring */
+/* Profile picture & rotating gradient ring */
 .profile-pic {
   position: relative;
   display: inline-block;
   margin-bottom: 1.2rem;
 }
-
 .profile-pic .ring {
   position: absolute;
   inset: -12px;
@@ -138,7 +136,6 @@ body {
   filter: blur(1.5px);
   z-index: -1;
 }
-
 @keyframes spinRing {
   from {
     transform: rotate(0deg);
@@ -147,7 +144,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 .profile-pic img {
   width: 135px;
   height: 135px;
@@ -157,7 +153,7 @@ body {
   z-index: 2;
 }
 
-/* Text styles */
+/* Hero text */
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -179,7 +175,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Button */
+/* Hero button */
 .hero .btn {
   background: white;
   color: #7f00ff;
@@ -255,45 +251,25 @@ section h2 {
   font-weight: 500;
 }
 
-/* ================= PROJECTS ================= */
-/* ================= PROJECTS SECTION ================= */
-.projects {
-  background: #f9f9ff;
-}
-
-.project-filters {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 8px 20px;
-  border-radius: 30px;
-  border: 2px solid #7f00ff;
-  background: transparent;
-  color: #7f00ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
-  color: #fff;
-}
-
-/* ================= PROJECT GRID ================= */
+/* ================= PROJECTS (FIXED) ================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* ================= PROJECT CARD ================= */
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-card {
   position: relative;
   background: #fff;
@@ -304,25 +280,20 @@ section h2 {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(127, 0, 255, 0.2);
 }
-
 .project-content h4 {
   color: #7f00ff;
   margin-bottom: 10px;
   font-size: 1.1rem;
 }
-
-/* ================= TECH STACK BADGES ================= */
 .stack-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-
 .stack-badges span {
   background: linear-gradient(135deg, #7f00ff, #e100ff);
   color: #fff;
@@ -331,8 +302,6 @@ section h2 {
   border-radius: 20px;
   font-weight: 500;
 }
-
-/* ================= PROJECT HOVER OVERLAY ================= */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -353,23 +322,18 @@ section h2 {
   text-align: center;
   padding: 20px;
 }
-
 .project-card:hover .project-overlay {
   opacity: 1;
   transform: scale(1);
 }
-
 .project-overlay h3 {
   font-size: 1.3rem;
   font-weight: 600;
 }
-
 .project-overlay p {
   font-size: 0.9rem;
   opacity: 0.9;
 }
-
-/* ================= OVERLAY BUTTON ================= */
 .project-overlay .btn {
   background: #fff;
   color: #7f00ff;
@@ -380,26 +344,9 @@ section h2 {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .project-overlay .btn:hover {
   background: #fff799;
   color: #000;
-}
-
-/* ================= MOBILE RESPONSIVENESS ================= */
-@media (max-width: 600px) {
-  .project-overlay h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-overlay p {
-    font-size: 0.8rem;
-  }
-
-  .project-overlay .btn {
-    font-size: 0.8rem;
-    padding: 6px 16px;
-  }
 }
 
 /* ================= CONTACT ================= */
@@ -429,21 +376,6 @@ section h2 {
 }
 .contact button:hover {
   background: #7f00ff;
-}
-
-/* ================= PROFILE PICTURE ================= */
-.profile-pic {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-.profile-pic img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff799;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ================= CONTACT INFO ================= */
@@ -489,178 +421,71 @@ section h2 {
   color: #7f00ff;
 }
 
-/* ================= PROJECTS SECTION ================= */
-.projects {
-  background: #f9f9ff;
-}
-
-.project-filters {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.filter-btn {
-  padding: 8px 20px;
-  border-radius: 30px;
-  border: 2px solid #7f00ff;
-  background: transparent;
-  color: #7f00ff;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
-  color: #fff;
-}
-
-/* ================= PROJECT GRID ================= */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-/* ================= PROJECT CARD ================= */
-.project-card {
-  position: relative;
-  background: #fff;
-  border-radius: 20px;
-  padding: 25px;
-  min-height: 200px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(127, 0, 255, 0.2);
-}
-
-.project-content h4 {
-  color: #7f00ff;
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-/* ================= TECH STACK BADGES ================= */
-.stack-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.stack-badges span {
-  background: linear-gradient(135deg, #7f00ff, #e100ff);
-  color: #fff;
-  font-size: 0.7rem;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-weight: 500;
-}
-
-/* ================= PROJECT HOVER OVERLAY ================= */
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(127, 0, 255, 0.95),
-    rgba(225, 0, 255, 0.95)
-  );
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  opacity: 0;
-  transform: scale(1.15);
-  transition: all 0.4s ease;
-  text-align: center;
-  padding: 20px;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.project-overlay h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.project-overlay p {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-/* ================= OVERLAY BUTTON ================= */
-.project-overlay .btn {
-  background: #fff;
-  color: #7f00ff;
-  padding: 8px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.project-overlay .btn:hover {
-  background: #fff799;
-  color: #000;
-}
-
-/* ================= MOBILE RESPONSIVENESS ================= */
-@media (max-width: 600px) {
-  .project-overlay h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-overlay p {
-    font-size: 0.8rem;
-  }
-
-  .project-overlay .btn {
-    font-size: 0.8rem;
-    padding: 6px 16px;
-  }
-}
-
-/* ================= FOOTER ================= */
+/* ================= FOOTER (FULL WIDTH FIXED) ================= */
 footer {
-  text-align: center;
-  padding: 2rem;
+  width: 100%;
   background: #f0f0f0;
-  color: #666;
-  font-size: 0.9rem;
+  padding: 2rem 1rem;
+  text-align: center;
   border-top: 1px solid #ddd;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-/* ================= MEDIA QUERIES ================= */
+footer * {
+  max-width: 100%;
+}
+
+/* ================= RESPONSIVE HERO & PROFILE ================= */
 @media (max-width: 768px) {
-  .contact-details {
-    flex-direction: column;
-    gap: 20px;
+  .hero h1 {
+    font-size: 2rem;
   }
-  .contact-item {
-    justify-content: center;
+  .hero h2.typed-text {
+    font-size: 1.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+  .profile-pic .ring {
+    inset: -10px;
+  }
+
+  .hero-bg-code::before {
+    font-size: 16px;
+    top: 5%;
   }
 }
+
 @media (max-width: 480px) {
-  .contact-item p {
-    font-size: 0.9rem;
-    text-align: center;
+  .hero h1 {
+    font-size: 1.6rem;
   }
-  .contact-item i {
-    font-size: 1.3rem;
+  .hero h2.typed-text {
+    font-size: 1rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+  .profile-pic .ring {
+    inset: -8px;
+  }
+
+  .hero-bg-code::before {
+    font-size: 12px;
+    top: 2%;
   }
 }

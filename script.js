@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* --------------------
-     Typing animation (custom, no external lib)
+     Typing animation (hero)
      -------------------- */
   const typedElm = document.getElementById("typed-text");
   const phrases = [
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pause = 1600;
 
   function tick() {
+    if (!typedElm) return; // safety check
     const current = phrases[pIndex];
     if (!deleting) {
       typedElm.textContent = current.slice(0, ++lIndex);
@@ -34,26 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setTimeout(tick, deleting ? deleteSpeed : typeSpeed);
   }
-  // start typing a little after load
   setTimeout(tick, 700);
-
-  /* --------------------
-     Hero smooth entrance (fade + translate)
-     -------------------- */
-  const heroSection = document.querySelector(".hero");
-  heroSection.style.opacity = 0;
-  heroSection.style.transform = "translateY(28px)";
-  setTimeout(() => {
-    heroSection.style.transition = "all 1.4s ease";
-    heroSection.style.opacity = 1;
-    heroSection.style.transform = "translateY(0)";
-  }, 100);
 
   /* --------------------
      IntersectionObserver: Reveal sections & animate skills
      -------------------- */
-  const sections = document.querySelectorAll(".section");
-  const skillItems = document.querySelectorAll(".skill-item");
+  const sections = document.querySelectorAll("section");
+  const skillItems = document.querySelectorAll(".skill-card");
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
@@ -61,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
 
-          // if skills section, reveal skills with stagger
           if (entry.target.id === "skills") {
             skillItems.forEach((item, idx) => {
               setTimeout(() => item.classList.add("revealed"), idx * 90);
@@ -88,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Initial hide
   projectCards.forEach((card) => (card.style.display = "none"));
   setTimeout(showAllProjects, 120);
 
@@ -95,8 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       filterButtons.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
+      const filter = btn.dataset.filter.toLowerCase();
 
-      const filter = btn.dataset.filter;
       projectCards.forEach((card, idx) => {
         const category = (card.dataset.category || "").toLowerCase();
         const match = filter === "all" || category === filter;
@@ -105,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => card.classList.add("show"), 20 + idx * 30);
         } else {
           card.classList.remove("show");
-          setTimeout(() => (card.style.display = "none"), 320);
+          setTimeout(() => {
+            card.style.display = "none";
+          }, 320);
         }
       });
     });
@@ -114,7 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
   /* --------------------
      Navbar scroll highlight
      -------------------- */
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
   function onScrollHighlight() {
     let currentId = "";
     sections.forEach((section) => {
@@ -123,10 +114,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     navLinks.forEach((link) => {
       link.classList.remove("active");
-      const href = link.getAttribute("href");
-      if (href === `#${currentId}`) link.classList.add("active");
+      if (link.getAttribute("href") === `#${currentId}`)
+        link.classList.add("active");
     });
   }
+
   window.addEventListener("scroll", onScrollHighlight, { passive: true });
   onScrollHighlight();
 
@@ -156,13 +148,15 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   /* --------------------
-     Optional social nav helpers
+     Optional helper navigation functions
      -------------------- */
   window.goToGitHub = () => {
-    window.location.href = "https://github.com/PertuniaSegoss";
+    window.open("https://github.com/PertuniaSegoss", "_blank");
   };
   window.goToLinkedIn = () => {
-    window.location.href =
-      "https://www.linkedin.com/in/pertunia-ndhlovu-384372201/";
+    window.open(
+      "https://www.linkedin.com/in/pertunia-ndhlovu-384372201/",
+      "_blank"
+    );
   };
 });
